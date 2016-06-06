@@ -9,6 +9,8 @@ var browserSyncSpa = require('browser-sync-spa');
 
 var util = require('util');
 
+var exec = require('child_process').exec;
+
 var proxyMiddleware = require('http-proxy-middleware');
 
 function browserSyncInit(baseDir, browser) {
@@ -55,7 +57,7 @@ gulp.task('serve', ['watch'], function () {
 
 gulp.task('rails', function() {
   exec('rails server');
-})
+});
 
 gulp.task('serve:full-stack', ['rails', 'serve']);
 
