@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :groups
+  # resources :groups
   scope '/api' do
     resources :groups, except: [:new, :edit]
   end
